@@ -1,0 +1,15 @@
+[package]
+name = "assets"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bson = { version = "2.3.0", features = ["chrono"] }
+chrono = "0.4.19"
+dotenv = "0.15.0"
+envy = "0.4.2"
+mongodb = "2.2.2"
+serde = "1.0.137"
+tokio = "1.19.2"
