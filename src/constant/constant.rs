@@ -5,7 +5,7 @@ pub fn check() {
     dotenv::dotenv().expect("Failed to read .env file");
     println!(
         "Mongo DB Url: {}",
-        env::var("MONGODB_URL").expect("Mongo DB Url not found")
+        env::var("MONGODB_URI").expect("Mongo DB Url not found")
     );
     println!(
         "Mongo DB Username: {}",
@@ -15,4 +15,8 @@ pub fn check() {
         "Mongo DB Port: {}",
         env::var("MONGODB_PORT").expect("Mongo DB Portnot found")
     );
+}
+pub fn get_str(key: &str) -> String {
+    dotenv::dotenv().expect("Failed to read .env file");
+    env::var(key).expect(&format!("{} not found", key))
 }
